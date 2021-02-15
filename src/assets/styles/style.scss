@@ -1,0 +1,715 @@
+body {
+  background: #ffffff;
+}
+
+$sizes: 0px, 10px, 12px, 14px, 16px, 18px, 20px, 30px, 40px, 50px, 80px;
+
+@each $size in $sizes {
+  .fz-#{$size} {
+    font-size: $size;
+  }
+  .m-#{$size} {
+    margin: $size;
+  }
+  .mT-#{$size} {
+    margin-top: $size !important;
+  }
+  .mR-#{$size} {
+    margin-right: $size !important;
+  }
+  .mB-#{$size} {
+    margin-bottom: $size !important;
+  }
+  .mL-#{$size} {
+    margin-left: $size !important;
+  }
+}
+
+// Color Variables
+
+$white: #ffffff;
+$charcol-black: #4a4a4a;
+$grey: #858585;
+$lightgrey: #d8d8d8;
+
+.charcol-color {
+  color: $charcol-black;
+}
+
+.white-color {
+  color: $white;
+}
+
+.grey-color {
+  color: $grey;
+}
+
+.white-bg {
+  background-color: $white;
+}
+
+// Error Handling
+
+.error-message {
+  background: #ffd0d0;
+  border-radius: 3px;
+  border: 1px solid #ff4343;
+  padding: 7px 30px;
+
+  img {
+    display: inline;
+    height: 14px;
+    margin-right: 16px;
+  }
+}
+
+// Authentication and Login
+
+.auth-container {
+  width: 600px;
+  margin-top: 125px;
+  padding-top: 0;
+}
+
+.login-container {
+  padding: 26px 50px 23px;
+  margin-top: 50px;
+}
+
+.input-label {
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.916716px;
+  margin-bottom: 0px;
+  @extend .charcol-color;
+}
+
+.common-input {
+  border-radius: 3px;
+  height: 34px;
+  outline: none;
+  padding-left: 4px;
+  padding-right: 4px;
+  border: 1px solid #979797;
+  //   box-shadow: inset 0px 1px 3px 0.5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.login-button {
+  background-color: #34749b;
+  margin-top: 10px;
+  border-radius: 3px;
+  height: 34px;
+  outline: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  line-height: 24px;
+  letter-spacing: 0.916716px;
+  padding: 9px 0 1px;
+}
+
+.forgot-text {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.802126px;
+  color: #3d5170;
+  @extend .mT-30px;
+  @extend .mB-0px;
+}
+
+// Dashboard
+
+.main-bluelabel {
+  margin-top: 64px;
+  padding: 10px 57.5px;
+  background: linear-gradient(90deg, #34759c 0%, #57a9ca 100%);
+  height: 40px;
+  line-height: 24px;
+  letter-spacing: 0.916716px;
+  @extend .white-color;
+}
+
+.calendar-block {
+  margin: 20px 15px 20px 40px;
+
+  .month-selector {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @extend .mB-20px;
+
+    &_leftsect {
+      display: inline-flex;
+      align-items: center;
+
+      i.fas.fa-caret-left {
+        cursor: pointer;
+        color: $lightgrey;
+        @extend .fz-20px;
+      }
+
+      .monthvalue {
+        @extend .fz-20px;
+        padding: 0 12px;
+        color: #5c5c5c;
+        line-height: 23px;
+        letter-spacing: 0.930233px;
+      }
+
+      i.fas.fa-caret-right {
+        cursor: pointer;
+        color: $lightgrey;
+        @extend .fz-20px;
+      }
+    }
+  }
+}
+
+.add-lecture-btn {
+  background-color: #34749b;
+  margin-left: auto;
+  border-radius: 3px;
+  padding: 0 15px;
+  font-size: 10px;
+  min-height: 26px;
+  min-width: 110px;
+}
+
+.add-outlinebtn {
+  @extend .fz-12px;
+  line-height: 14px;
+  letter-spacing: 0.55814px;
+  color: #bfbfbf;
+  height: 28px;
+  outline: none;
+  width: 100%;
+  border: 1px solid #d2d2d2;
+  border-radius: 3px;
+  font-weight: bold;
+
+  i {
+    margin-right: 4px;
+  }
+}
+
+.calendar-side-block {
+  max-height: 724px;
+  background: $white;
+  box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 20px 20px 40px 15px;
+  padding: 16px 22px;
+
+  .instruction-block {
+    display: flex;
+    align-items: center;
+    @extend .mB-10px;
+
+    &_leftsect {
+      flex: 1;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.651163px;
+      @extend .grey-color;
+    }
+
+    &_rightsect {
+      display: inline-flex;
+      align-items: center;
+
+      i.fas.fa-caret-left {
+        cursor: pointer;
+        color: $lightgrey;
+        @extend .fz-14px;
+      }
+
+      .monthvalue {
+        @extend .fz-14px;
+        padding: 0 12px;
+        color: $grey;
+        line-height: 16px;
+        letter-spacing: 0.651163px;
+      }
+
+      i.fas.fa-caret-right {
+        cursor: pointer;
+        color: $lightgrey;
+        @extend .fz-14px;
+      }
+    }
+  }
+}
+
+.lecture-card {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 12px 5px;
+  width: 100%;
+  margin: 0 0 8px;
+  min-height: 68px;
+  background: #e3e3e3;
+  color: #898989;
+  border-radius: 3.5px;
+  cursor: pointer;
+  z-index: 40;
+
+  .tutorinfo {
+    display: flex;
+    align-items: center;
+
+    .tutor-name {
+      @extend .fz-12px;
+      flex: 1;
+      line-height: 14px;
+      letter-spacing: 0.55814px;
+      font-weight: bold;
+    }
+    .time-stamp {
+      @extend .fz-12px;
+      display: inline-flex;
+      align-items: center;
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .student-info {
+    @extend .mT-20px;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.465116px;
+    i {
+      margin-right: 5px;
+    }
+  }
+
+  .settings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 18px;
+    height: 18px;
+    background: #ffffff;
+    border-radius: 3.5px 0px 3.5px 0px;
+    z-index: 41;
+    cursor: pointer;
+
+    i {
+      @extend .fz-10px;
+      color: #1594c3;
+    }
+  }
+
+  &.upcominglecture-chip {
+    background: #bae5f5;
+    color: #1594c3;
+  }
+}
+
+.lecture-card-block {
+  position: relative;
+
+  .settings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 18px;
+    height: 18px;
+    background: #ffffff;
+    border-radius: 3.5px 0px 3.5px 0px;
+    z-index: 41;
+    cursor: pointer;
+
+    i {
+      @extend .fz-10px;
+      color: #1594c3;
+    }
+  }
+}
+
+// Calendar
+
+.customcalendar {
+  // border: 0.3px solid #979797;
+  // border-radius: 10px;
+  // overflow: hidden;
+
+  .calendar-header {
+    height: 30px;
+    border-left: 0.3px solid #979797;
+    background: #f9f9f9;
+
+    .header-value {
+      @extend .fz-14px;
+      margin-top: 5px;
+    }
+  }
+
+  .day-cell {
+    height: 137px;
+    padding: 8px 6px;
+    cursor: pointer;
+    position: relative;
+    background: #ffffff;
+    border-left: 0.3px solid #979797;
+    border-top: 0.3px solid #979797;
+  }
+}
+
+.daycell-inner {
+  position: relative;
+  height: 100%;
+}
+
+.custom-calendar.vc-container {
+  --day-border: 0.3px solid #979797;
+  --day-border-highlight: 0.3px solid #b8c2cc;
+  --day-width: 140px;
+  --day-height: 140px;
+  --weekday-bg: #f9f9f9;
+  --weekday-border: 0.3px solid #979797;
+  border-color: #979797;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+
+  & .vc-header {
+    // background-color: #f1f5f8;
+    padding: 10px 0;
+  }
+
+  & .vc-weeks {
+    padding: 0;
+  }
+
+  & .vc-weekday {
+    background-color: var(--weekday-bg);
+    border-bottom: var(--weekday-border);
+    border-top: var(--weekday-border);
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.651163px;
+    color: #6d7278;
+    min-height: 30px;
+    align-items: center;
+    font-weight: var(--font-normal);
+  }
+
+  & .vc-day {
+    padding: 8px 6px 0px;
+    text-align: left;
+    height: var(--day-height);
+    min-width: var(--day-width);
+    background-color: white;
+    align-items: flex-end;
+    justify-content: flex-end;
+    // &.weekday-1,
+    // &.weekday-7 {
+    //   // background-color: #eff8ff;
+    // }
+
+    &:not(.on-bottom) {
+      border-bottom: var(--day-border);
+
+      &.weekday-1 {
+        border-bottom: var(--day-border-highlight);
+      }
+    }
+
+    &:not(.on-right) {
+      border-right: var(--day-border);
+    }
+
+    &.is-today {
+      background-color: #dff6ff;
+      box-shadow: inset 0 0 1px 1px #57a9ca;
+
+      .daycell-date {
+        color: #57a9ca;
+      }
+    }
+
+    &.is-selected {
+      background-color: #dff6ff;
+      box-shadow: inset 0 0 1px 1px #57a9ca;
+
+      .daycell-date {
+        color: #57a9ca;
+      }
+    }
+
+    .daycell-date {
+      @extend .fz-18px;
+      line-height: 21px;
+      letter-spacing: 0.837209px;
+      font-weight: 500;
+      color: #858585;
+      text-align: right;
+    }
+
+    .lecture-infochip {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 18px;
+      background: #b4b4b4;
+      border-radius: 3px;
+      margin-bottom: 4px;
+      @extend .fz-12px;
+      line-height: 12px;
+      letter-spacing: 0.465116px;
+      @extend .white-color;
+      padding: 0 9px;
+    }
+
+    .lecture-infochip.upcominglecture-chip {
+      background: #57a9ca;
+    }
+
+    .lectureinfo {
+      @extend .fz-10px;
+      line-height: 12px;
+      letter-spacing: 0.465116px;
+      color: #b4b4b4;
+    }
+    & .vc-day-content {
+      margin: 0;
+    }
+  }
+
+  & .vc-day-dots {
+    margin-bottom: 5px;
+  }
+}
+
+// Dashboard Lecture Detail Modal
+
+.dashlecture-detail-modal {
+  .vm--modal {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+
+    .modal-header {
+      position: relative;
+      padding: 20px 10px 12px;
+      text-align: center;
+      width: 100%;
+
+      .lecture-modal-title {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 1.33333px;
+        color: #34749b;
+        margin: 0px;
+      }
+
+      .close-btn {
+        position: absolute;
+        right: 10px;
+        top: 0px;
+        font-size: 24px;
+        color: #979797;
+      }
+    }
+
+    .modal-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      .tab-row {
+        background-color: #ebf5fa;
+        box-shadow: 0px 1px 1px rgba(122, 122, 122, 0.5);
+        padding: 3px;
+
+        button {
+          font-size: 12px;
+          line-height: 18px;
+          letter-spacing: 1px;
+          color: #57a9ca;
+          background: transparent;
+          width: 100%;
+          height: 22px;
+        }
+
+        button.active {
+          background: #57a9ca;
+          border-radius: 3px;
+          color: #ffffff;
+        }
+      }
+
+      .tab-section {
+        height: 100%;
+        padding: 30px;
+        flex-direction: column;
+
+        .tabs_inner {
+          flex: 1;
+          justify-content: space-between;
+          display: inline-flex;
+          flex-direction: column;
+
+          &_firstsect {
+            .lecture-info {
+              margin-bottom: 12px;
+              h2 {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 1px;
+                color: #34749b;
+                margin-bottom: 6px;
+              }
+              p {
+                background: #f9f9f9;
+                display: inline-block;
+                font-weight: 500;
+                font-size: 10px;
+                line-height: 18px;
+                letter-spacing: 0.833333px;
+                color: #757575;
+                min-width: 130px;
+                padding: 0 6px;
+                margin: 0px;
+              }
+            }
+
+            .dateblock {
+              display: flex;
+              .lecture-info {
+                h2 {
+                  font-size: 8px;
+                  color: #979797;
+                  margin-bottom: 4px;
+                }
+                p {
+                  min-width: 120px;
+                }
+              }
+
+              .seprator {
+                position: relative;
+                width: 17px;
+                margin: 0 12px;
+
+                &:before {
+                  position: absolute;
+                  content: "";
+                  width: 17px;
+                  height: 2px;
+                  background-color: #979797;
+                  bottom: 21px;
+                }
+              }
+            }
+          }
+
+          &_lastsect.delete-lecture {
+            width: 100%;
+
+            .delete-btn {
+              background: #de6356;
+              border-radius: 3.5px;
+              font-size: 12px;
+              line-height: 14px;
+              letter-spacing: 0.55814px;
+              height: 28px;
+              color: #ffffff;
+              width: 100%;
+            }
+          }
+        }
+
+        .participant {
+          background: #ffffff;
+          box-shadow: 0px 2px 4px rgba(190, 190, 190, 0.5);
+          border-radius: 2px;
+          margin-bottom: 20px;
+
+          .participant-header {
+            display: flex;
+            align-items: center;
+            background: #57a9ca;
+            border-radius: 2px;
+            color: #ffffff;
+            min-height: 24px;
+            padding: 0 13px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.75px;
+
+            i {
+              font-size: 16px;
+              margin-right: 12px;
+            }
+          }
+
+          .participant-info {
+            padding: 13px;
+            font-weight: 500;
+            font-size: 8px;
+            line-height: 12px;
+            letter-spacing: 0.75px;
+            color: #4a4a4a;
+            p {
+              margin-bottom: 4px;
+
+              &:last-child {
+                margin-bottom: 0px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.dashlecture-delete-modal {
+  .vm--modal {
+    background: #ffffff;
+    border-radius: 10px;
+
+    .modal-body {
+      padding: 30px;
+
+      p {
+        font-weight: 500;
+        @extend .fz-12px;
+        line-height: 18px;
+        letter-spacing: 1px;
+        color: #34749b;
+        @extend .mB-30px;
+      }
+
+      .cancel-small-btn {
+        background: #b4b4b4;
+        box-shadow: 0px 2px 4px rgba(136, 135, 135, 0.5);
+        border-radius: 2px;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.916716px;
+        height: 30px;
+        margin: 0 15px;
+        min-width: 100px;
+        color: #ffffff;
+      }
+
+      .delete-small-btn {
+        @extend .cancel-small-btn;
+        background: #DE6356;
+      }
+    }
+  }
+}

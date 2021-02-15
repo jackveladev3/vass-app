@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-vaasapp-dev-75305-authRole",
+      "UnauthRoleArn": "arn:aws:iam::895094329168:role/amplify-vaasapp-dev-75305-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::895094329168:role/amplify-vaasapp-dev-75305-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-vaasapp-dev-75305-deployment",
+      "UnauthRoleName": "amplify-vaasapp-dev-75305-unauthRole",
+      "StackName": "amplify-vaasapp-dev-75305",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:895094329168:stack/amplify-vaasapp-dev-75305/65b012e0-0861-11eb-b03f-0a949fc6e0c6",
+      "AmplifyAppId": "d3etbe073jgv2e"
+    }
+  }
+}

@@ -1,0 +1,381 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*, :after, :before {
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e2e8f0;
+}
+
+.container {
+    width: 100%;
+    padding: 12px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 1264px) {
+    .container {
+        max-width: 1185px;
+    }
+}
+
+@media (min-width: 960px) {
+    .container {
+        max-width: 900px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
+
+
+
+.w-full {
+    width: 100%;
+}
+
+.w-64 {
+    width: 16rem;
+}
+
+.w-16 {
+    width: 4rem;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.z-10 {
+    z-index: 10;
+}
+
+.z-30 {
+    z-index: 30;
+}
+
+.top-0 {
+    top: 0;
+}
+
+.bottom-0 {
+    bottom: 0;
+}
+
+.left-0 {
+    left: 0;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.relative {
+    position: relative;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.-ml-4 {
+    margin-left: -1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-auto {
+    flex: 1 1 auto;
+}
+
+.bg-white {
+    --bg-opacity: 1;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, var(--bg-opacity));
+}
+
+.bg-dark {
+    --bg-opacity: 1;
+    background-color: #979797;
+    background-color: rgba(151, 151, 151, var(--bg-opacity));
+}
+
+.overflow-auto {
+    overflow: auto!important;
+}
+
+.duration-300 {
+    transition-duration: 300ms;
+}
+
+.duration-500 {
+    transition-duration: 500ms;
+}
+
+.ease-in-out {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition {
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+}
+
+.transition-all {
+    transition-property: all;
+}
+
+.-translate-x-full {
+    --transform-translate-x: -100%;
+}
+
+.transform {
+    // --transform-translate-x: 0;
+    --transform-translate-y: 0;
+    --transform-rotate: 0;
+    --transform-skew-x: 0;
+    --transform-skew-y: 0;
+    --transform-scale-x: 1;
+    --transform-scale-y: 1;
+    transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+button, input, select, textarea {
+    background-color: transparent;
+}
+
+button, input, optgroup, select, textarea {
+    font: inherit;
+}
+
+button, input, optgroup, select, textarea {
+    padding: 0;
+}
+
+button, input {
+    overflow: visible;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    --text-opacity: 1;
+    color: #3D5170;
+    color: rgba(61, 81, 112, var(--text-opacity));
+}
+
+.text-error {
+    --text-opacity: 1;
+    color: #FF4D4F;
+    color: rgba(255, 77, 79, var(--text-opacity));
+}
+
+.text-secondary {
+    --text-opacity: 1;
+    color: #4A4A4A;
+    color: rgba(74, 74, 74, var(--text-opacity));
+}
+
+blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.border {
+    border-width: 1px;
+}
+
+.border-dark {
+    --border-opacity: 1;
+    border-color: #979797;
+    border-color: rgba(151, 151, 151, var(--border-opacity));
+}
+
+.text-white {
+    --text-opacity: 1;
+    color: #fff;
+    color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+img {
+    border-style: none;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: inherit;
+}
+
+.w-3\/4 {
+    width: 75%;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.border-t {
+    border-top-width: 1px;
+}
+
+.border-dark {
+    --border-opacity: 1;
+    border-color: #979797;
+    border-color: rgba(151, 151, 151, var(--border-opacity));
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #DEDEDE !important; 
+    border-radius: 30px;
+}
+
+#app {
+    background:#fbfbfb;
+}
+
+button {
+    outline: none !important;
+}
+
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+    box-shadow: 0 0 0px 1000px #eee inset;
+    -webkit-box-shadow: 0 0 0px 1000px #eee inset;
+}
+.color-text-blue{
+    color: #3D5170;
+  }
+  .submitbtn{
+    color:white !important;
+    background-color: #34749B !important;
+    margin-top:30px;
+    border-radius:3px;
+    height:34px;outline:none;
+    box-shadow:0px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .deletebtn{
+        color:white !important;
+        background-color: #de6356 !important;
+        margin-top:30px;
+        border-radius:3px;
+        height:28px;outline:none;
+        width:100%;
+        box-shadow:0px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    input:read-only {
+        cursor: pointer !important;
+      }
+      .myheading{
+        font-size:16px;
+        margin: 0px 0px 16px;
+        font-weight: normal !important;
+        }
+.posrelative{
+    position: relative;
+}
+
+body, .v-application{
+    font-family:"Noto Sans JP", "Hiragino Sans","Yu Gothic",sans-serif;
+}
+
+v-text-field input {
+    font-size: 13px !important;
+}
+.v-input input {
+    font-size: 13px !important;
+}
+
+element.style {
+    height: 0px;
+}
+
+.v-btn--icon.v-size--default {
+    z-index:10 !important;
+}
+.padding6px{
+    padding-left: 6px !important;
+}
